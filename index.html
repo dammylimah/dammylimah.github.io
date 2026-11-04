@@ -1,35 +1,976 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="The personal portfolio of Dammy Limah, cinematic video trailer creator and creative storyteller.">
-<title>Dammy Limah | Personal Portfolio</title>
+<title>Dammy Limah | Cinematic Video Trailer Creator</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#090909;--panel:#151515;--gold:#c9a45c;--pale:#ead5a3;--white:#f6f2e9;--muted:#aaa49a;--line:rgba(201,164,92,.25)}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:700 22px 'Playfair Display',serif;letter-spacing:2px;color:var(--pale)}.links{display:flex;gap:23px;font-size:13px;color:#ddd}.links a:hover{color:var(--gold)}.nav-cta,.btn{display:inline-block;padding:12px 20px;background:var(--gold);border:1px solid var(--gold);color:#111;font-size:13px;font-weight:700;cursor:pointer}.btn.ghost{background:transparent;color:var(--pale)}
-.hero{padding:76px 0 88px;background:radial-gradient(ellipse at 75% 35%,#9b762c24,transparent 42%),linear-gradient(110deg,#090909,#171208)}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}.eyebrow{color:var(--pale);font-size:11px;letter-spacing:3px;text-transform:uppercase;font-weight:700}.hero h1{font:600 clamp(46px,6vw,76px)/1.08 'Playfair Display',serif;margin:20px 0}.hero h1 span{color:var(--pale);font-style:italic}.hero-copy{max-width:600px;color:#c6c0b5;font-size:16px;margin-bottom:27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.portrait-frame{position:relative;max-width:430px;margin-left:auto;padding:12px;border:1px solid var(--gold);background:#17130c}.portrait-frame:before{content:'';position:absolute;inset:22px -12px -12px 22px;border:1px solid #c9a45c70;z-index:0}.portrait{position:relative;z-index:1;display:block;width:100%;height:510px;object-fit:cover;object-position:center 25%;filter:saturate(.92)}.portrait-caption{position:absolute;z-index:2;bottom:25px;left:25px;background:rgba(9,9,9,.78);padding:10px 15px;border-left:2px solid var(--gold);font:18px 'Playfair Display',serif}
-section{padding:82px 0}.dark{background:#101010}.section-head{max-width:690px;margin-bottom:35px}.section-head h2,.about-copy h2,.contact-copy h2{font:600 clamp(34px,4vw,48px)/1.16 'Playfair Display',serif;margin:12px 0 15px}.section-head p,.muted{color:var(--muted)}.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:54px;align-items:center}.about-photo{width:100%;max-height:420px;object-fit:cover;object-position:center 25%;border:1px solid var(--line);padding:8px}.about-copy p{color:var(--muted);margin:12px 0}.signature{font:italic 24px 'Playfair Display',serif;color:var(--pale);margin-top:22px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);padding:26px}.num{font-size:11px;letter-spacing:2px;color:var(--gold)}.card h3{font:600 23px 'Playfair Display',serif;margin:12px 0}.card p{font-size:14px;color:var(--muted)}
-.marquee{overflow:hidden;padding:18px 0;mask-image:linear-gradient(90deg,transparent,black 7%,black 93%,transparent)}.track{display:flex;width:max-content;animation:scroll 42s linear infinite}.marquee:hover .track{animation-play-state:paused}.genre-set{display:flex;gap:12px;padding-right:12px;flex-shrink:0}.genre{white-space:nowrap;padding:10px 18px;border:1px solid var(--line);background:linear-gradient(135deg,#211b10,#121212);color:var(--pale);font-size:13px}@keyframes scroll{to{transform:translateX(-50%)}}@media(prefers-reduced-motion:reduce){.track{animation:none}.marquee{overflow-x:auto;mask-image:none}}
-.prices{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.price-card{background:var(--panel);border:1px solid var(--line);padding:23px}.price-card h3{font:600 20px 'Playfair Display',serif}.amount{font:600 39px 'Playfair Display',serif;color:var(--pale);margin:12px 0}.price-card p{font-size:13px;color:var(--muted)}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}form{display:grid;gap:13px}label{display:grid;gap:6px;color:var(--muted);font-size:12px}input,select,textarea{width:100%;padding:13px;background:#111;color:var(--white);border:1px solid #40392e;font:14px 'DM Sans',sans-serif}textarea{min-height:110px}footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.gold{color:var(--pale)}
-@media(max-width:850px){.links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.portrait-frame{margin:10px auto 0;width:min(100%,430px)}.portrait{height:460px}.cards{grid-template-columns:1fr}.prices{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.hero{padding:55px 0}.portrait{height:390px}.prices{grid-template-columns:1fr}.nav-cta{padding:10px 12px;font-size:11px}section{padding:62px 0}}
+:root {
+  --bg: #07111f;
+  --bg-light: #0b1b30;
+  --panel: rgba(16, 34, 57, .78);
+  --blue: #5d9dff;
+  --silver: #dceaff;
+  --white: #f5f8ff;
+  --muted: #aab9cc;
+  --line: rgba(160, 195, 235, .18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+/* MOVING CINEMATIC LIGHT EFFECTS */
+
+.light-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: .8;
+}
+
+.light-field::before,
+.light-field::after {
+  content: "";
+  position: absolute;
+  width: 130vw;
+  height: 32vh;
+  left: -15vw;
+  border-radius: 50%;
+  filter: blur(27px);
+  background: linear-gradient(
+    110deg,
+    transparent 10%,
+    rgba(50, 120, 255, .08) 30%,
+    rgba(180, 215, 255, .32) 48%,
+    rgba(65, 145, 255, .16) 62%,
+    transparent 85%
+  );
+}
+
+.light-field::before {
+  top: 16%;
+  transform: rotate(-18deg);
+  animation: lightFlow 19s ease-in-out infinite alternate;
+}
+
+.light-field::after {
+  top: 58%;
+  height: 23vh;
+  opacity: .65;
+  transform: rotate(14deg);
+  animation: lightFlowTwo 24s ease-in-out infinite alternate;
+}
+
+@keyframes lightFlow {
+  0% { transform: translate(-12%, 0) rotate(-18deg); }
+  50% { transform: translate(8%, 30px) rotate(-12deg); }
+  100% { transform: translate(18%, -20px) rotate(-20deg); }
+}
+
+@keyframes lightFlowTwo {
+  0% { transform: translate(12%, 0) rotate(14deg); }
+  50% { transform: translate(-8%, -25px) rotate(8deg); }
+  100% { transform: translate(-18%, 15px) rotate(18deg); }
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* NAVIGATION */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(5, 15, 29, .88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  font: 700 23px 'Playfair Display', serif;
+  letter-spacing: 2px;
+  color: var(--silver);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 13px;
+  color: #d0dcec;
+}
+
+.links a {
+  transition: color .3s ease;
+}
+
+.links a:hover {
+  color: var(--blue);
+}
+
+.nav-cta, .btn {
+  display: inline-block;
+  padding: 12px 21px;
+  background: linear-gradient(120deg, #8fc0ff, #dceaff);
+  border: 1px solid #a8ceff;
+  color: #07111f;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.nav-cta:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(83, 151, 255, .25);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--silver);
+  border: 1px solid rgba(190, 215, 255, .5);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--white);
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  padding: 95px 0 105px;
+  background:
+    radial-gradient(ellipse at 78% 35%, rgba(44, 104, 190, .18), transparent 45%),
+    linear-gradient(110deg, rgba(5, 15, 29, .8), rgba(11, 28, 49, .55));
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr .92fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #9fc9ff;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero h1 {
+  font: 600 clamp(46px, 6vw, 76px)/1.08 'Playfair Display', serif;
+  margin: 21px 0;
+}
+
+.hero h1 span {
+  color: var(--silver);
+  font-style: italic;
+}
+
+.hero-copy {
+  max-width: 580px;
+  color: #b9c8da;
+  font-size: 16px;
+  margin-bottom: 29px;
+}
+
+.actions {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.portrait-frame {
+  position: relative;
+  max-width: 430px;
+  margin-left: auto;
+  padding: 12px;
+  border: 1px solid rgba(157, 197, 255, .7);
+  background: rgba(19, 39, 65, .7);
+  box-shadow: 0 15px 65px rgba(0, 0, 0, .25);
+}
+
+.portrait-frame::before {
+  content: "";
+  position: absolute;
+  inset: 22px -12px -12px 22px;
+  border: 1px solid rgba(150, 193, 255, .4);
+  z-index: 0;
+}
+
+.portrait {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.portrait-caption {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(5, 15, 29, .85);
+  padding: 10px 15px;
+  border-left: 2px solid #9fc9ff;
+  font: 18px 'Playfair Display', serif;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.dark {
+  background: rgba(7, 18, 33, .72);
+  border-top: 1px solid rgba(160, 195, 235, .08);
+  border-bottom: 1px solid rgba(160, 195, 235, .08);
+}
+
+.section-head {
+  max-width: 690px;
+  margin-bottom: 38px;
+}
+
+.section-head h2,
+.about-copy h2,
+.contact-copy h2 {
+  font: 600 clamp(34px, 4vw, 49px)/1.16 'Playfair Display', serif;
+  margin: 12px 0 16px;
+}
+
+.section-head p,
+.muted {
+  color: var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  object-position: center 25%;
+  border: 1px solid rgba(160, 195, 235, .3);
+  padding: 8px;
+  background: rgba(16, 34, 57, .6);
+}
+
+.about-copy p {
+  color: var(--muted);
+  margin: 13px 0;
+}
+
+.signature {
+  font: italic 25px 'Playfair Display', serif;
+  color: var(--silver);
+  margin-top: 23px;
+}
+
+/* SERVICES */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 29px;
+  transition: transform .3s ease, border-color .3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(137, 190, 255, .65);
+}
+
+.num {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #91bcf5;
+}
+
+.card h3 {
+  font: 600 23px 'Playfair Display', serif;
+  margin: 13px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* MOVING GENRES */
+
+.marquee {
+  overflow: hidden;
+  padding: 18px 0;
+  mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 42s linear infinite;
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.genre-set {
+  display: flex;
+  gap: 12px;
+  padding-right: 12px;
+  flex-shrink: 0;
+}
+
+.genre {
+  white-space: nowrap;
+  padding: 11px 19px;
+  border: 1px solid rgba(150, 190, 245, .25);
+  background: linear-gradient(135deg, rgba(29, 62, 100, .7), rgba(10, 24, 41, .9));
+  color: #d5e7ff;
+  font-size: 13px;
+}
+
+@keyframes scroll {
+  to { transform: translateX(-50%); }
+}
+
+/* PRICING */
+
+.prices {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.price-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 25px;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(137, 190, 255, .65);
+}
+
+.price-card h3 {
+  font: 600 20px 'Playfair Display', serif;
+}
+
+.amount {
+  font: 600 39px 'Playfair Display', serif;
+  color: var(--silver);
+  margin: 12px 0;
+}
+
+.price-card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.contact-copy p {
+  color: var(--muted);
+}
+
+.email-link {
+  color: var(--silver);
+  border-bottom: 1px solid rgba(160, 195, 235, .5);
+  transition: color .3s ease;
+}
+
+.email-link:hover {
+  color: #8fc0ff;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: rgba(7, 18, 33, .85);
+  color: var(--white);
+  border: 1px solid rgba(160, 195, 235, .25);
+  font: 14px 'DM Sans', sans-serif;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #8fc0ff;
+}
+
+select option {
+  background: #0b1b30;
+  color: white;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form .btn {
+  width: fit-content;
+  border: none;
+}
+
+.form-note {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 27px 0;
+  color: var(--muted);
+  font-size: 12px;
+  background: rgba(5, 15, 29, .8);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.gold {
+  color: var(--silver);
+}
+
+/* MOBILE */
+
+@media(max-width: 850px) {
+  .links {
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    padding: 24px 5%;
+    background: rgba(5, 15, 29, .98);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-frame {
+    margin: 15px auto 0;
+    width: min(100%, 430px);
+  }
+
+  .portrait {
+    height: 460px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .prices {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 480px) {
+  .hero {
+    padding: 58px 0;
+  }
+
+  .hero h1 {
+    font-size: 47px;
+  }
+
+  .portrait {
+    height: 390px;
+  }
+
+  .prices {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-cta {
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .foot {
+    flex-direction: column;
+  }
+}
+
+/* ACCESSIBILITY: RESPECT REDUCED MOTION */
+
+@media(prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap"><nav><a class="brand" href="#home">DAMMY LIMAH</a><div class="links"><a href="#about">About Me</a><a href="#services">What I Do</a><a href="#genres">Genres</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div><a class="nav-cta" href="#contact">Let's Talk</a></nav></div></header>
+
+<div class="light-field" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">DAMMY LIMAH</a>
+
+      <div class="links" id="navLinks">
+        <a href="#about">About Me</a>
+        <a href="#services">What I Do</a>
+        <a href="#genres">Genres</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <a class="nav-cta" href="#contact">Let's Talk</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="wrap hero-grid"><div><div class="eyebrow">My Personal Portfolio · Creative Storytelling</div><h1>Hello, I'm<br><span>Dammy Limah.</span></h1><p class="hero-copy">I'm a cinematic video trailer creator with a passion for turning books, films and creative ideas into captivating visual experiences. I help stories make a memorable first impression.</p><div class="actions"><a class="btn" href="#services">Explore My Work</a><a class="btn ghost" href="#contact">Work With Me</a></div></div><div class="portrait-frame"><img class="portrait" src="dammy-limah-photo.jpeg" alt="Portrait of Dammy Limah"><div class="portrait-caption">The creative behind the stories.</div></div></div></section>
-<section id="about"><div class="wrap about-grid"><div><img class="about-photo" src="dammy-limah-photo.jpeg" alt="Dammy Limah smiling"></div><div class="about-copy"><div class="eyebrow">A Little About Me</div><h2>My creativity begins with your story.</h2><p>I'm Dammy Limah. I create cinematic video trailers that introduce stories with feeling, atmosphere and purpose.</p><p>From the world inside a book to the scenes of a film or the message behind a promotion, I focus on finding the heart of each project and presenting it in a way that captures attention.</p><p>This is my personal creative space—a place to share what I do, the stories I help bring forward, and how we can work together.</p><div class="signature">Dammy Limah</div></div></div></section>
-<section class="dark" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What I Do</div><h2>Creative work, shaped around your story.</h2><p>Personalized cinematic trailer services for authors, filmmakers and creators.</p></div><div class="cards"><article class="card"><div class="num">01 / BOOKS</div><h3>Book & Novel Trailers</h3><p>Give readers a glimpse into your book's world with a trailer designed to spark curiosity and make them want to turn the first page.</p></article><article class="card"><div class="num">02 / FILM</div><h3>Movie & Film Trailers</h3><p>Introduce your film through atmosphere, story highlights and a compelling preview that builds anticipation.</p></article><article class="card"><div class="num">03 / PROMOTION</div><h3>Promotional Videos</h3><p>Present your project, launch or creative idea with a focused visual message made to connect with your audience.</p></article></div></div></section>
-<section id="genres"><div class="wrap"><div class="section-head"><div class="eyebrow">Stories of Every Kind</div><h2>Many genres. One creative passion.</h2><p class="muted">I welcome projects across a wide range of genres and storytelling styles.</p></div><div class="marquee"><div class="track"><div class="genre-set"><span class="genre">Action</span><span class="genre">Adventure</span><span class="genre">Comedy</span><span class="genre">Drama</span><span class="genre">Fantasy</span><span class="genre">Horror</span><span class="genre">Mystery</span><span class="genre">Romance</span><span class="genre">Science Fiction</span><span class="genre">Thriller</span><span class="genre">Documentary</span><span class="genre">Inspirational</span><span class="genre">Historical</span><span class="genre">Faith-Based</span><span class="genre">Young Adult</span><span class="genre">Children's</span><span class="genre">Biography</span><span class="genre">Nonfiction</span></div><div class="genre-set" aria-hidden="true"><span class="genre">Action</span><span class="genre">Adventure</span><span class="genre">Comedy</span><span class="genre">Drama</span><span class="genre">Fantasy</span><span class="genre">Horror</span><span class="genre">Mystery</span><span class="genre">Romance</span><span class="genre">Science Fiction</span><span class="genre">Thriller</span><span class="genre">Documentary</span><span class="genre">Inspirational</span><span class="genre">Historical</span><span class="genre">Faith-Based</span><span class="genre">Young Adult</span><span class="genre">Children's</span><span class="genre">Biography</span><span class="genre">Nonfiction</span></div></div></div></div></section>
-<section class="dark" id="pricing"><div class="wrap"><div class="section-head"><div class="eyebrow">My Pricing</div><h2>Choose the trailer length you need.</h2><p class="muted">Every project starts with your story and the experience you want your audience to have.</p></div><div class="prices"><article class="price-card"><div class="num">01 / SHORT</div><h3>30-Second Trailer</h3><div class="amount">$350</div><p>A concise introduction to your story.</p></article><article class="price-card"><div class="num">02 / STANDARD</div><h3>60-Second Trailer</h3><div class="amount">$700</div><p>More room for atmosphere and intrigue.</p></article><article class="price-card"><div class="num">03 / EXTENDED</div><h3>75-Second Trailer</h3><div class="amount">$900</div><p>A deeper cinematic story preview.</p></article><article class="price-card"><div class="num">04 / PREMIERE</div><h3>90-Second Trailer</h3><div class="amount">$1,200</div><p>An extended visual experience.</p></article></div></div></section>
-<section id="contact"><div class="wrap contact-grid"><div class="contact-copy"><div class="eyebrow">Let's Connect</div><h2>Have a story you'd love to bring to life?</h2><p class="muted">Tell me a little about your book, film or project. I'll be glad to hear what you're creating.</p><p style="margin-top:24px"><span class="gold">Email me</span><br><a href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a></p></div><form id="contactForm"><label>Your name<input name="name" required placeholder="Your name"></label><label>Your email<input name="email" type="email" required placeholder="you@example.com"></label><label>What are you creating?<select name="project"><option>Book or novel trailer</option><option>Movie or film trailer</option><option>Promotional video</option><option>Something else</option></select></label><label>Tell me about your project<textarea name="details" placeholder="Project title, genre and a little about your story..."></textarea></label><button class="btn" type="submit">Send Project Enquiry</button><p class="muted" style="font-size:11px">This form opens an email addressed to me. It does not store submissions or accept payments.</p></form></div></section>
+
+<!-- HOMEPAGE -->
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+
+    <div>
+      <div class="eyebrow">My Personal Portfolio · Creative Storytelling</div>
+
+      <h1>Hello, I'm<br><span>Dammy Limah.</span></h1>
+
+      <p class="hero-copy">
+        I'm a cinematic video trailer creator with a passion for turning books, films and creative ideas into captivating visual experiences. I help stories make a memorable first impression.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="#services">Explore My Work</a>
+        <a class="btn ghost" href="#contact">Work With Me</a>
+      </div>
+    </div>
+
+    <div class="portrait-frame">
+      <img class="portrait" src="dammy-limah-photo.jpeg" alt="Portrait of Dammy Limah">
+      <div class="portrait-caption">The creative behind the stories.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+
+<section id="about">
+  <div class="wrap about-grid">
+
+    <div>
+      <img class="about-photo" src="dammy-limah-photo.jpeg" alt="Dammy Limah smiling">
+    </div>
+
+    <div class="about-copy">
+      <div class="eyebrow">A Little About Me</div>
+
+      <h2>My creativity begins with your story.</h2>
+
+      <p>
+        I'm Dammy Limah. I create cinematic video trailers that introduce stories with feeling, atmosphere and purpose.
+      </p>
+
+      <p>
+        From the world inside a book to the scenes of a film or the message behind a promotion, I focus on finding the heart of each project and presenting it in a way that captures attention.
+      </p>
+
+      <p>
+        This is my personal creative space—a place to share what I do, the stories I help bring forward, and how we can work together.
+      </p>
+
+      <div class="signature">Dammy Limah</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="dark" id="services">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">What I Do</div>
+      <h2>Creative work, shaped around your story.</h2>
+      <p>Personalized cinematic trailer services for authors, filmmakers and creators.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="num">01 / BOOKS</div>
+        <h3>Book & Novel Trailers</h3>
+        <p>
+          Give readers a glimpse into your book's world with a trailer designed to spark curiosity and make them want to turn the first page.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">02 / FILM</div>
+        <h3>Movie & Film Trailers</h3>
+        <p>
+          Introduce your film through atmosphere, story highlights and a compelling preview that builds anticipation.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="num">03 / PROMOTION</div>
+        <h3>Promotional Videos</h3>
+        <p>
+          Present your project, launch or creative idea with a focused visual message made to connect with your audience.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- GENRES -->
+
+<section id="genres">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">Stories of Every Kind</div>
+      <h2>Many genres. One creative passion.</h2>
+      <p class="muted">I welcome projects across a wide range of genres and storytelling styles.</p>
+    </div>
+
+    <div class="marquee">
+      <div class="track">
+
+        <div class="genre-set">
+          <span class="genre">Action</span>
+          <span class="genre">Adventure</span>
+          <span class="genre">Comedy</span>
+          <span class="genre">Drama</span>
+          <span class="genre">Fantasy</span>
+          <span class="genre">Horror</span>
+          <span class="genre">Mystery</span>
+          <span class="genre">Romance</span>
+          <span class="genre">Science Fiction</span>
+          <span class="genre">Thriller</span>
+          <span class="genre">Documentary</span>
+          <span class="genre">Inspirational</span>
+          <span class="genre">Historical</span>
+          <span class="genre">Faith-Based</span>
+          <span class="genre">Young Adult</span>
+          <span class="genre">Children's</span>
+          <span class="genre">Biography</span>
+          <span class="genre">Nonfiction</span>
+        </div>
+
+        <div class="genre-set" aria-hidden="true">
+          <span class="genre">Action</span>
+          <span class="genre">Adventure</span>
+          <span class="genre">Comedy</span>
+          <span class="genre">Drama</span>
+          <span class="genre">Fantasy</span>
+          <span class="genre">Horror</span>
+          <span class="genre">Mystery</span>
+          <span class="genre">Romance</span>
+          <span class="genre">Science Fiction</span>
+          <span class="genre">Thriller</span>
+          <span class="genre">Documentary</span>
+          <span class="genre">Inspirational</span>
+          <span class="genre">Historical</span>
+          <span class="genre">Faith-Based</span>
+          <span class="genre">Young Adult</span>
+          <span class="genre">Children's</span>
+          <span class="genre">Biography</span>
+          <span class="genre">Nonfiction</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRICING -->
+
+<section class="dark" id="pricing">
+  <div class="wrap">
+
+    <div class="section-head">
+      <div class="eyebrow">My Pricing</div>
+      <h2>Choose the trailer length you need.</h2>
+      <p class="muted">Every project starts with your story and the experience you want your audience to have.</p>
+    </div>
+
+    <div class="prices">
+
+      <article class="price-card">
+        <div class="num">01 / SHORT</div>
+        <h3>30-Second Trailer</h3>
+        <div class="amount">$350</div>
+        <p>A concise introduction to your story.</p>
+      </article>
+
+      <article class="price-card">
+        <div class="num">02 / STANDARD</div>
+        <h3>60-Second Trailer</h3>
+        <div class="amount">$700</div>
+        <p>More room for atmosphere and intrigue.</p>
+      </article>
+
+      <article class="price-card">
+        <div class="num">03 / EXTENDED</div>
+        <h3>75-Second Trailer</h3>
+        <div class="amount">$900</div>
+        <p>A deeper cinematic story preview.</p>
+      </article>
+
+      <article class="price-card">
+        <div class="num">04 / PREMIERE</div>
+        <h3>90-Second Trailer</h3>
+        <div class="amount">$1,200</div>
+        <p>An extended visual experience.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="wrap contact-grid">
+
+    <div class="contact-copy">
+      <div class="eyebrow">Let's Connect</div>
+
+      <h2>Have a story you'd love to bring to life?</h2>
+
+      <p>
+        Tell me a little about your book, film or project. I'll be glad to hear what you're creating.
+      </p>
+
+      <p style="margin-top:24px">
+        <span class="gold">Email me</span><br>
+        <a class="email-link" href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a>
+      </p>
+    </div>
+
+    <form id="contactForm">
+
+      <label>
+        Your name
+        <input name="name" required placeholder="Your name">
+      </label>
+
+      <label>
+        Your email
+        <input name="email" type="email" required placeholder="you@example.com">
+      </label>
+
+      <label>
+        What are you creating?
+        <select name="project">
+          <option>Book or novel trailer</option>
+          <option>Movie or film trailer</option>
+          <option>Promotional video</option>
+          <option>Something else</option>
+        </select>
+      </label>
+
+      <label>
+        Tell me about your project
+        <textarea name="details" placeholder="Project title, genre and a little about your story..."></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send Project Enquiry</button>
+
+      <p class="form-note">
+        This form opens an email addressed to me. It does not store submissions or accept payments.
+      </p>
+
+    </form>
+
+  </div>
+</section>
+
 </main>
-<footer><div class="wrap foot"><span>© <span id="year"></span> Dammy Limah. Personal Portfolio.</span><span>Made with creativity and a love of stories.</span><a class="gold" href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent('Website enquiry from '+d.get('name'));const body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nProject: '+d.get('project')+'\n\nDetails:\n'+d.get('details'));window.location.href='mailto:dammylimah@gmail.com?subject='+subject+'&body='+body;});</script>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Dammy Limah. Personal Portfolio.</span>
+    <span>Made with creativity and a love of stories.</span>
+    <a class="gold" href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', function () {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', isOpen);
+  menuToggle.textContent = isOpen ? '✕' : '☰';
+});
+
+navLinks.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', function () {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.textContent = '☰';
+  });
+});
+
+/* CONTACT FORM */
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const data = new FormData(this);
+
+  const subject = encodeURIComponent(
+    'Website enquiry from ' + data.get('name')
+  );
+
+  const body = encodeURIComponent(
+    'Name: ' + data.get('name') +
+    '\nEmail: ' + data.get('email') +
+    '\nProject: ' + data.get('project') +
+    '\n\nDetails:\n' + data.get('details')
+  );
+
+  window.location.href =
+    'mailto:dammylimah@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+
 </body>
 </html>
