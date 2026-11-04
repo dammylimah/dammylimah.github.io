@@ -1,336 +1,588 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dammy Limah | Professional Scriptwriter & Creative Storyteller</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dammy Limah creates cinematic book, movie and promotional video trailers.">
+<title>Dammy Limah | Cinematic Video Trailers</title>
 
-  <style>
-    :root {
-      --bg-color: #0b0f17;
-      --card-bg: #151c28;
-      --card-border: #222d3d;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent: #38bdf8;
-      --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
-      --accent-hover: #0284c7;
-    }
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+:root {
+  --bg: #090909;
+  --panel: #151515;
+  --gold: #c9a45c;
+  --light: #ead5a3;
+  --white: #f5f1e8;
+  --muted: #aaa49a;
+  --border: rgba(201,164,92,.25);
+}
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      padding: 40px 15px;
-      overflow-x: hidden;
-    }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .container {
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
-    }
+html { scroll-behavior: smooth; }
 
-    header {
-      text-align: center;
-      padding-bottom: 40px;
-    }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      background: var(--accent-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
+a { color: inherit; text-decoration: none; }
 
-    .subtitle {
-      font-size: clamp(1rem, 3vw, 1.25rem);
-      color: var(--text-muted);
-      font-weight: 500;
-    }
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
 
-    .section {
-      background: var(--card-bg);
-      padding: clamp(20px, 4vw, 35px);
-      margin-top: 30px;
-      border-radius: 16px;
-      border: 1px solid var(--card-border);
-      word-wrap: break-word;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(9,9,9,.96);
+  border-bottom: 1px solid var(--border);
+}
 
-    h2 {
-      color: var(--text-main);
-      font-size: clamp(1.25rem, 3vw, 1.6rem);
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
 
-    h2::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 22px;
-      background: var(--accent);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
+.logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--light);
+  font-size: 23px;
+  letter-spacing: 2px;
+}
 
-    p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 15px;
-    }
+.navlinks {
+  display: flex;
+  gap: 23px;
+  font-size: 13px;
+  color: #ddd;
+}
 
-    /* Genres Live Grid */
-    .genres-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
+.navlinks a:hover { color: var(--gold); }
 
-    .genre-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--card-border);
-      padding: 20px;
-      border-radius: 12px;
-      transition: all 0.2s ease;
-    }
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  background: var(--gold);
+  color: #111;
+  border: 1px solid var(--gold);
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
 
-    .genre-card:hover {
-      border-color: var(--accent);
-      transform: translateY(-3px);
-    }
+.btn:hover { background: var(--light); }
 
-    .genre-card h3 {
-      color: var(--accent);
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
+.outline {
+  background: transparent;
+  color: var(--light);
+}
 
-    .genre-card p {
-      font-size: 0.95rem;
-      margin-bottom: 0;
-    }
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at 80% 35%, #9b762c33, transparent 40%),
+    linear-gradient(110deg,#090909,#191208);
+}
 
-    /* Pricing & Concepts Grid */
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
+.hero-content { max-width: 760px; padding: 90px 0; }
 
-    .price-card {
-      background: #0f172a;
-      border: 1px solid var(--card-border);
-      padding: 24px 16px;
-      border-radius: 14px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s, border-color 0.2s;
-    }
+.eyebrow {
+  color: var(--light);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
 
-    .price-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
 
-    .price-card .duration {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-main);
-      margin-bottom: 6px;
-    }
+h1 {
+  font-size: clamp(48px,7vw,82px);
+  margin: 22px 0;
+}
 
-    .price-card .concept-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      line-height: 1.4;
-    }
+h1 span { color: var(--light); font-style: italic; }
 
-    .price-card .amount {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--accent);
-      margin-top: auto;
-    }
+.hero p {
+  max-width: 620px;
+  color: #c6c0b5;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
 
-    /* Projects List */
-    ul.project-list {
-      list-style: none;
-      margin-top: 15px;
-    }
+.actions { display: flex; gap: 13px; flex-wrap: wrap; }
 
-    ul.project-list li {
-      background: #0f172a;
-      padding: 18px;
-      margin-bottom: 12px;
-      border-radius: 10px;
-      border: 1px solid var(--card-border);
-      color: var(--text-main);
-    }
+section { padding: 85px 0; }
 
-    ul.project-list li strong {
-      color: var(--accent);
-      font-size: 1.05rem;
-    }
+.dark { background: #101010; }
 
-    /* CTA Section */
-    .cta-section {
-      text-align: center;
-      background: linear-gradient(180deg, var(--card-bg) 0%, rgba(21, 28, 40, 0.8) 100%);
-    }
+.heading { max-width: 680px; margin-bottom: 38px; }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 28px;
-      background: var(--accent-gradient);
-      color: #0b0f17;
-      font-weight: 700;
-      font-size: 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: opacity 0.2s, transform 0.2s;
-      max-width: 100%;
-      word-break: break-word;
-    }
+h2 { font-size: clamp(34px,4vw,48px); margin: 12px 0 16px; }
 
-    .btn:hover {
-      opacity: 0.95;
-      transform: translateY(-2px);
-    }
+.muted, .heading p { color: var(--muted); }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-  </style>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 27px;
+}
+
+.card h3 { font-size: 24px; margin: 13px 0; }
+
+.card p { color: var(--muted); font-size: 14px; }
+
+.number {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.about-grid, .contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.art {
+  min-height: 330px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 25px;
+  border: 1px solid var(--border);
+  background: radial-gradient(circle,#c9a45c35,transparent 60%),#15120d;
+  font-family: 'Playfair Display',serif;
+  font-size: clamp(35px,5vw,58px);
+  color: var(--light);
+  line-height: 1.2;
+}
+
+/* MOVING GENRE DISPLAY */
+
+.genre-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  mask-image: linear-gradient(to right,transparent,black 8%,black 92%,transparent);
+}
+
+.genre-track {
+  display: flex;
+  width: max-content;
+  animation: moveGenres 38s linear infinite;
+}
+
+.genre-marquee:hover .genre-track {
+  animation-play-state: paused;
+}
+
+.genre-set {
+  display: flex;
+  gap: 14px;
+  padding-right: 14px;
+  flex-shrink: 0;
+}
+
+.genre {
+  white-space: nowrap;
+  padding: 12px 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg,#211b10,#121212);
+  color: var(--light);
+  font-size: 13px;
+}
+
+@keyframes moveGenres {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genre-track { animation: none; }
+  .genre-marquee { overflow-x: auto; mask-image: none; }
+}
+
+.price {
+  font-family: 'Playfair Display',serif;
+  font-size: 43px;
+  color: var(--light);
+  margin: 13px 0;
+}
+
+.price small {
+  font-family: 'DM Sans',sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+ul {
+  list-style: none;
+  margin: 18px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+li { padding: 7px 0; border-bottom: 1px solid #ffffff12; }
+
+li:before {
+  content: "✦";
+  color: var(--gold);
+  margin-right: 9px;
+}
+
+form { display: grid; gap: 14px; }
+
+label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: var(--white);
+  border: 1px solid #40392e;
+  font: 14px 'DM Sans',sans-serif;
+}
+
+textarea { min-height: 115px; }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gold { color: var(--light); }
+
+@media(max-width:800px) {
+  .navlinks { display: none; }
+  .grid { grid-template-columns: 1fr; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero { min-height: 540px; }
+  section { padding: 65px 0; }
+}
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <header>
-      <h1>Dammy Limah</h1>
-      <p class="subtitle">Professional Scriptwriter • Content Creator • Storyteller</p>
-    </header>
+<header>
+<div class="container">
+<nav>
+<a href="#home" class="logo">DAMMY LIMAH</a>
+<div class="navlinks">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#genres">Genres</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</div>
+<a href="#contact" class="btn">Start a Project</a>
+</nav>
+</div>
+</header>
 
-    <div class="section">
-      <h2>About My Work</h2>
-      <p>I craft high-impact, cinematic video scripts and promotional trailers designed to capture attention, hook viewers instantly, and drive results for authors, creators, and brands.</p>
-    </div>
+<main>
 
-    <div class="section">
-      <h2>Genres I Specialize In</h2>
-      <p>Every script is custom-tailored with the right tone, pacing, and emotional hook for your specific genre:</p>
-      
-      <div class="genres-grid">
-        <div class="genre-card">
-          <h3>Fiction & Non-Fiction Books</h3>
-          <p>Cinematic book trailers and teasers that bring your characters and themes to life.</p>
-        </div>
-        <div class="genre-card">
-          <h3>Cultural & Social Impact</h3>
-          <p>Compelling narratives celebrating diversity, community, and shared human stories.</p>
-        </div>
-        <div class="genre-card">
-          <h3>Thriller, Sci-Fi & Fantasy</h3>
-          <p>Suspenseful, high-stakes dialogue and pacing that keep audiences on the edge of their seats.</p>
-        </div>
-        <div class="genre-card">
-          <h3>Business & Brand Promos</h3>
-          <p>Sharp, results-driven video commercials and digital ads for platforms like YouTube and IG.</p>
-        </div>
-      </div>
-    </div>
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+<div class="eyebrow">Cinematic Storytelling · Video Trailer Production</div>
+<h1>Every Great Story<br>Deserves a <span>Trailer.</span></h1>
+<p>We transform books, films and creative ideas into captivating video trailers that spark curiosity, build anticipation and make audiences want to discover more.</p>
+<div class="actions">
+<a href="#contact" class="btn">Create Your Trailer</a>
+<a href="#services" class="btn outline">Explore Services</a>
+</div>
+</div>
+</div>
+</section>
 
-    <div class="section">
-      <h2>Services, Concepts & Pricing</h2>
-      <p>Professional scriptwriting structured by duration, complete with full concept development, visual directions, and voiceover pacing.</p>
-      
-      <div class="pricing-grid">
-        <div class="price-card">
-          <div>
-            <div class="duration">30 Seconds</div>
-            <div class="concept-desc">Fast-paced social media teaser focused on a single powerful hook and clear call-to-action.</div>
-          </div>
-          <div class="amount">$350</div>
-        </div>
+<section class="dark" id="about">
+<div class="container about-grid">
+<div>
+<div class="eyebrow">The Creative Vision</div>
+<h2>Stories Deserve to Be Seen, Heard and Felt.</h2>
+<p class="muted">Dammy Limah creates cinematic promotional trailers designed to capture the heart of a story. Every detail is shaped to engage the right audience and leave a lasting impression.</p>
+<br>
+<p class="muted">Whether you are an author launching a book, a filmmaker promoting a movie or a creator sharing a new project, your story deserves a powerful introduction.</p>
+</div>
+<div class="art">YOUR STORY.<br>OUR CINEMATIC VISION.</div>
+</div>
+</section>
 
-        <div class="price-card">
-          <div>
-            <div class="duration">60 Seconds</div>
-            <div class="concept-desc">Balanced narrative structure introducing conflict, core themes, and memorable resolution.</div>
-          </div>
-          <div class="amount">$700</div>
-        </div>
+<section id="services">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">What We Create</div>
+<h2>Trailers That Bring Ideas to Life.</h2>
+<p>Professional video trailers for creators who want to make a memorable first impression.</p>
+</div>
 
-        <div class="price-card">
-          <div>
-            <div class="duration">75 Seconds</div>
-            <div class="concept-desc">Immersive promotional trailer with deeper character storytelling and emotional depth.</div>
-          </div>
-          <div class="amount">$900</div>
-        </div>
+<div class="grid">
+<div class="card">
+<div class="number">01 / BOOKS</div>
+<h3>Book & Novel Trailers</h3>
+<p>Bring characters, worlds and page-turning moments to life with cinematic trailers for fiction, nonfiction, children's books and every genre.</p>
+</div>
 
-        <div class="price-card">
-          <div>
-            <div class="duration">90 Seconds</div>
-            <div class="concept-desc">Full cinematic showcase with multi-act progression, dynamic beats, and complete narrative arc.</div>
-          </div>
-          <div class="amount">$1,200</div>
-        </div>
-      </div>
-    </div>
+<div class="card">
+<div class="number">02 / FILM</div>
+<h3>Movie & Film Trailers</h3>
+<p>Build excitement around your film with dramatic pacing, evocative visuals and a compelling preview that makes viewers want to watch.</p>
+</div>
 
-    <div class="section">
-      <h2>Featured Projects</h2>
-      <ul class="project-list">
-        <li>
-          <strong>What We Bring To The Party</strong> (by L J Ribar)<br>
-          30-second high-energy book trailer script celebrating cultural diversity, community celebration, and human connection.
-        </li>
-        <li>
-          <strong>GitHub Developer Platform Promo</strong><br>
-          30-second tech trailer script highlighting seamless repository building and cloud deployment.
-        </li>
-      </ul>
-    </div>
+<div class="card">
+<div class="number">03 / PROMOTION</div>
+<h3>Promotional Videos</h3>
+<p>Introduce your brand, creative project, launch or campaign through engaging visual storytelling tailored to your message.</p>
+</div>
+</div>
+</div>
+</section>
 
-    <div class="section cta-section">
-      <h2>Let's Bring Your Story to Life</h2>
-      <p>Ready to collaborate on a script for your next book launch, brand video, or project?</p>
-      <a href="mailto:dammylimah@gmail.com" class="btn">Email Me: dammylimah@gmail.com</a>
-    </div>
+<section class="dark" id="genres">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Every Kind of Story</div>
+<h2>All Genres. One Cinematic Standard.</h2>
+<p class="muted">From heart-stopping suspense to uplifting inspiration, we shape the mood around your story.</p>
+</div>
 
-    <footer>
-      <p>&copy; 2026 Dammy Limah. All rights reserved.</p>
-    </footer>
-  </div>
+<div class="genre-marquee">
+<div class="genre-track">
+<div class="genre-set">
+<span class="genre">Action</span>
+<span class="genre">Adventure</span>
+<span class="genre">Comedy</span>
+<span class="genre">Drama</span>
+<span class="genre">Fantasy</span>
+<span class="genre">Horror</span>
+<span class="genre">Mystery</span>
+<span class="genre">Romance</span>
+<span class="genre">Science Fiction</span>
+<span class="genre">Thriller</span>
+<span class="genre">Documentary</span>
+<span class="genre">Inspirational</span>
+<span class="genre">Historical</span>
+<span class="genre">Faith-Based</span>
+<span class="genre">Young Adult</span>
+<span class="genre">Children's</span>
+<span class="genre">Biography</span>
+<span class="genre">Nonfiction</span>
+</div>
+
+<div class="genre-set" aria-hidden="true">
+<span class="genre">Action</span>
+<span class="genre">Adventure</span>
+<span class="genre">Comedy</span>
+<span class="genre">Drama</span>
+<span class="genre">Fantasy</span>
+<span class="genre">Horror</span>
+<span class="genre">Mystery</span>
+<span class="genre">Romance</span>
+<span class="genre">Science Fiction</span>
+<span class="genre">Thriller</span>
+<span class="genre">Documentary</span>
+<span class="genre">Inspirational</span>
+<span class="genre">Historical</span>
+<span class="genre">Faith-Based</span>
+<span class="genre">Young Adult</span>
+<span class="genre">Children's</span>
+<span class="genre">Biography</span>
+<span class="genre">Nonfiction</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="container">
+<div class="heading">
+<div class="eyebrow">Our Packages</div>
+<h2>Choose Your Trailer Length.</h2>
+<p class="muted">Clear pricing. Creative storytelling. Professional presentation.</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="number">01 / INTRO</div>
+<h3>30-Second Trailer</h3>
+<div class="price">$350</div>
+<p class="muted">A concise, compelling introduction to your story.</p>
+<ul>
+<li>30-second video trailer</li>
+<li>Story-focused direction</li>
+<li>Promotional-ready video</li>
+</ul>
+<a href="#contact" class="btn outline">Choose Package</a>
+</div>
+
+<div class="card">
+<div class="number">02 / FEATURE</div>
+<h3>60-Second Trailer</h3>
+<div class="price">$700</div>
+<p class="muted">More room to build atmosphere and intrigue.</p>
+<ul>
+<li>60-second video trailer</li>
+<li>Expanded story presentation</li>
+<li>Promotional-ready video</li>
+</ul>
+<a href="#contact" class="btn outline">Choose Package</a>
+</div>
+
+<div class="card">
+<div class="number">03 / EXTENDED</div>
+<h3>75-Second Trailer</h3>
+<div class="price">$900</div>
+<p class="muted">A deeper cinematic journey into your project.</p>
+<ul>
+<li>75-second video trailer</li>
+<li>Detailed visual storytelling</li>
+<li>Promotional-ready video</li>
+</ul>
+<a href="#contact" class="btn outline">Choose Package</a>
+</div>
+
+<div class="card">
+<div class="number">04 / PREMIERE</div>
+<h3>90-Second Trailer</h3>
+<div class="price">$1,200</div>
+<p class="muted">An extended preview for a fuller experience.</p>
+<ul>
+<li>90-second video trailer</li>
+<li>Extended cinematic storytelling</li>
+<li>Promotional-ready video</li>
+</ul>
+<a href="#contact" class="btn outline">Choose Package</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="dark" id="contact">
+<div class="container contact-grid">
+<div>
+<div class="eyebrow">Let's Create Something Memorable</div>
+<h2>Ready to Bring Your Story to the Screen?</h2>
+<p class="muted">Tell us about your project. Your message will open in your email app so you can send your enquiry directly.</p>
+<br>
+<p><span class="gold">Email</span><br>
+<a href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a></p>
+</div>
+
+<form id="bookingForm">
+<label>Your Name
+<input name="name" required placeholder="Enter your name">
+</label>
+
+<label>Email Address
+<input name="email" type="email" required placeholder="you@example.com">
+</label>
+
+<label>Project Type
+<select name="type">
+<option>Book or Novel Trailer</option>
+<option>Movie or Film Trailer</option>
+<option>Promotional Video</option>
+<option>Other</option>
+</select>
+</label>
+
+<label>Trailer Length
+<select name="length">
+<option>30 seconds — $350</option>
+<option>60 seconds — $700</option>
+<option>75 seconds — $900</option>
+<option>90 seconds — $1,200</option>
+<option>Not sure yet</option>
+</select>
+</label>
+
+<label>Project Details
+<textarea name="details" placeholder="Book or film title, genre, story overview and goals..."></textarea>
+</label>
+
+<button class="btn" type="submit">Prepare Email Enquiry</button>
+<p class="muted" style="font-size:11px">This form prepares an email to Dammy Limah. It does not process payments or store submissions on this website.</p>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-content">
+<span>© <span id="year"></span> DAMMY LIMAH. All rights reserved.</span>
+<span>Cinematic trailers for stories worth sharing.</span>
+<a class="gold" href="mailto:dammylimah@gmail.com">dammylimah@gmail.com</a>
+</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const data = new FormData(this);
+
+  const subject = encodeURIComponent(
+    "Video Trailer Enquiry - " + data.get("name")
+  );
+
+  const body = encodeURIComponent(
+    "Name: " + data.get("name") +
+    "\nEmail: " + data.get("email") +
+    "\nProject Type: " + data.get("type") +
+    "\nTrailer Length: " + data.get("length") +
+    "\n\nProject Details:\n" + data.get("details")
+  );
+
+  window.location.href =
+    "mailto:dammylimah@gmail.com?subject=" + subject + "&body=" + body;
+});
+</script>
 
 </body>
 </html>
