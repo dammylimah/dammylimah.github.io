@@ -29,9 +29,7 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg);
@@ -145,13 +143,8 @@ nav {
   color: #d0dcec;
 }
 
-.links a {
-  transition: color .3s ease;
-}
-
-.links a:hover {
-  color: var(--blue);
-}
+.links a { transition: color .3s ease; }
+.links a:hover { color: var(--blue); }
 
 .nav-cta, .btn {
   display: inline-block;
@@ -274,9 +267,7 @@ nav {
 
 /* GENERAL SECTIONS */
 
-section {
-  padding: 85px 0;
-}
+section { padding: 85px 0; }
 
 .dark {
   background: rgba(7, 18, 33, .72);
@@ -296,10 +287,7 @@ section {
   margin: 12px 0 16px;
 }
 
-.section-head p,
-.muted {
-  color: var(--muted);
-}
+.section-head p, .muted { color: var(--muted); }
 
 /* ABOUT */
 
@@ -396,9 +384,7 @@ section {
   background: linear-gradient(145deg, #17375e, #091526 75%);
 }
 
-.portfolio-info {
-  padding: 21px;
-}
+.portfolio-info { padding: 21px; }
 
 .portfolio-info .num {
   display: block;
@@ -436,9 +422,7 @@ section {
   animation: scroll 42s linear infinite;
 }
 
-.marquee:hover .track {
-  animation-play-state: paused;
-}
+.marquee:hover .track { animation-play-state: paused; }
 
 .genre-set {
   display: flex;
@@ -469,9 +453,7 @@ section {
   align-items: start;
 }
 
-.contact-copy p {
-  color: var(--muted);
-}
+.contact-copy p { color: var(--muted); }
 
 .email-link {
   color: var(--silver);
@@ -479,14 +461,9 @@ section {
   transition: color .3s ease;
 }
 
-.email-link:hover {
-  color: #8fc0ff;
-}
+.email-link:hover { color: #8fc0ff; }
 
-form {
-  display: grid;
-  gap: 14px;
-}
+form { display: grid; gap: 14px; }
 
 label {
   display: grid;
@@ -546,9 +523,7 @@ footer {
   flex-wrap: wrap;
 }
 
-.gold {
-  color: var(--silver);
-}
+.gold { color: var(--silver); }
 
 /* MOBILE */
 
@@ -567,13 +542,8 @@ footer {
     gap: 17px;
   }
 
-  .links.open {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+  .links.open { display: flex; }
+  .menu-toggle { display: block; }
 
   .hero-grid,
   .about-grid,
@@ -586,50 +556,22 @@ footer {
     width: min(100%, 430px);
   }
 
-  .portrait {
-    height: 460px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .portrait { height: 460px; }
+  .cards { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media(max-width: 560px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+  .portfolio-grid { grid-template-columns: 1fr; }
 }
 
 @media(max-width: 480px) {
-  .hero {
-    padding: 58px 0;
-  }
-
-  .hero h1 {
-    font-size: 47px;
-  }
-
-  .portrait {
-    height: 390px;
-  }
-
-  .nav-cta {
-    padding: 9px 11px;
-    font-size: 11px;
-  }
-
-  section {
-    padding: 65px 0;
-  }
-
-  .foot {
-    flex-direction: column;
-  }
+  .hero { padding: 58px 0; }
+  .hero h1 { font-size: 47px; }
+  .portrait { height: 390px; }
+  .nav-cta { padding: 9px 11px; font-size: 11px; }
+  section { padding: 65px 0; }
+  .foot { flex-direction: column; }
 }
 
 /* ACCESSIBILITY: RESPECT REDUCED MOTION */
@@ -676,10 +618,8 @@ footer {
 
 <section class="hero" id="home">
   <div class="wrap hero-grid">
-
     <div>
       <div class="eyebrow">My Personal Portfolio · Creative Storytelling</div>
-
       <h1>Hello, I'm<br><span>Dammy Limah.</span></h1>
 
       <p class="hero-copy">
@@ -696,7 +636,6 @@ footer {
       <img class="portrait" src="dammy-limah-photo.png.png" alt="Portrait of Dammy Limah">
       <div class="portrait-caption">The creative behind the stories.</div>
     </div>
-
   </div>
 </section>
 
@@ -704,14 +643,12 @@ footer {
 
 <section id="about">
   <div class="wrap about-grid">
-
     <div>
       <img class="about-photo" src="dammy-limah-photo.png.png" alt="Dammy Limah smiling">
     </div>
 
     <div class="about-copy">
       <div class="eyebrow">A Little About Me</div>
-
       <h2>My creativity begins with your story.</h2>
 
       <p>
@@ -728,7 +665,6 @@ footer {
 
       <div class="signature">Dammy Limah</div>
     </div>
-
   </div>
 </section>
 
@@ -736,7 +672,6 @@ footer {
 
 <section class="dark" id="services">
   <div class="wrap">
-
     <div class="section-head">
       <div class="eyebrow">What I Do</div>
       <h2>Creative work, shaped around your story.</h2>
@@ -744,7 +679,6 @@ footer {
     </div>
 
     <div class="cards">
-
       <article class="card">
         <div class="num">01 / BOOKS</div>
         <h3>Book & Novel Trailers</h3>
@@ -768,7 +702,6 @@ footer {
           Present your project, launch or creative idea with a focused visual message made to connect with your audience.
         </p>
       </article>
-
     </div>
   </div>
 </section>
@@ -777,7 +710,6 @@ footer {
 
 <section class="dark" id="portfolio">
   <div class="wrap">
-
     <div class="section-head">
       <div class="eyebrow">Selected Creative Work</div>
       <h2>A closer look at my portfolio.</h2>
@@ -787,7 +719,6 @@ footer {
     </div>
 
     <div class="portfolio-grid">
-
       <article class="portfolio-card">
         <img
           class="portfolio-image"
@@ -829,13 +760,11 @@ footer {
           <p>Visual concept showcase.</p>
         </div>
       </article>
-
     </div>
 
     <p class="portfolio-note">
       Video previews will be added to this portfolio as they become available.
     </p>
-
   </div>
 </section>
 
@@ -843,7 +772,6 @@ footer {
 
 <section id="genres">
   <div class="wrap">
-
     <div class="section-head">
       <div class="eyebrow">Stories of Every Kind</div>
       <h2>Many genres. One creative passion.</h2>
@@ -852,7 +780,6 @@ footer {
 
     <div class="marquee">
       <div class="track">
-
         <div class="genre-set">
           <span class="genre">Action</span>
           <span class="genre">Adventure</span>
@@ -894,10 +821,8 @@ footer {
           <span class="genre">Biography</span>
           <span class="genre">Nonfiction</span>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
 
@@ -905,10 +830,8 @@ footer {
 
 <section id="contact">
   <div class="wrap contact-grid">
-
     <div class="contact-copy">
       <div class="eyebrow">Let's Connect</div>
-
       <h2>Have a story you'd love to bring to life?</h2>
 
       <p>
@@ -922,7 +845,6 @@ footer {
     </div>
 
     <form id="contactForm">
-
       <label>
         Your name
         <input name="name" required placeholder="Your name">
@@ -953,9 +875,7 @@ footer {
       <p class="form-note">
         This form opens an email addressed to me. It does not store submissions or accept payments.
       </p>
-
     </form>
-
   </div>
 </section>
 
